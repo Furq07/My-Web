@@ -1,0 +1,218 @@
+@import url("https://fonts.googleapis.com/css?family=Mali");
+
+html,
+body::-webkit-scrollbar {
+  background-color: #060606;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  margin: 0;
+  padding: 0;
+}
+
+.background {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.container {
+  height: auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+section {
+  margin-bottom: 50px;
+}
+
+section:last-child {
+  margin-bottom: 0;
+}
+
+section {
+  display: grid;
+  place-items: center;
+  align-content: center;
+  min-height: 85vh;
+  color: #d3d3d3;
+  text-align: left;
+  font-size: 25px;
+  font-family: "Mali", sans-serif;
+}
+
+section h1 {
+  color: #770000;
+  margin-bottom: 1%;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+section p {
+  margin-top: 0%;
+  font-size: 22px;
+  width: auto;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.hobbies p {
+  text-align: left;
+}
+.whome {
+  animation: transitionIn 1s;
+}
+.whome a {
+  color: #d3d3d3;
+}
+
+a:hover {
+  color: #770000;
+}
+.home {
+  color: #d3d3d3;
+  font-size: 25px;
+}
+
+.home:link {
+  color: #770000;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+.home:hover {
+  color: #490000;
+  background-color: transparent;
+  text-decoration: none;
+}
+.icon {
+  color: #770000;
+}
+
+.icon:link {
+  color: #770000;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+.icon:hover {
+  color: #490000;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+.ball {
+  position: absolute;
+  border-radius: 100%;
+  opacity: 0.7;
+}
+
+.hobbies.reveal {
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: all 1s ease;
+}
+.hobbies.reveal.active {
+  transform: translateY(0px);
+  opacity: 1;
+}
+
+@keyframes transitionIn {
+  from {
+    opacity: 0;
+    filter: blur(1px);
+  }
+  to {
+    opacity: 1;
+    filter: blur(0px);
+  }
+}
+
+@media (prefers-reduced-motion) {
+  .hidden {
+    transition: none;
+  }
+}
+@media screen and (min-width: 769px) {
+  section p {
+    width: 800px;
+    font-size: 22px;
+  }
+}
+@media screen and (max-width: 768px) {
+  section p {
+    width: 600px;
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 480px) {
+  section p {
+    width: auto;
+    font-size: 16px;
+  }
+}
+.divskills {
+  width: 100%;
+  max-width: 600px;
+  padding: 0 20px;
+}
+
+.skill-name {
+  font-size: 18px;
+  font-weight: 700;
+  color: #f1f1f1;
+  text-transform: uppercase;
+  margin: 20px 0;
+}
+
+.skill-bar {
+  height: 14px;
+  background: #282828;
+  border-radius: 3px;
+}
+
+.skills.reveal.active {
+  .skill-per {
+    height: 14px;
+    background: #d13639;
+    border-radius: 3px;
+    position: relative;
+    animation: fillBars 2.5s 1;
+  }
+}
+
+.skill-per::before {
+  color: black;
+  content: attr(per);
+  position: absolute;
+  padding: 4px 6px;
+  background: #f1f1f1;
+  border-radius: 4px;
+  font-size: 12px;
+  top: -35px;
+  right: 0;
+  transform: translateX(50%);
+}
+
+.skill-per::after {
+  color: black;
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: #f1f1f1;
+  top: -20px;
+  right: 0;
+  transform: translateX(50%) rotate(45deg);
+  border-radius: 2px;
+}
+
+@keyframes fillBars {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
