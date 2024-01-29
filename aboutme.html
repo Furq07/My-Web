@@ -11,7 +11,7 @@
     <title>Furq.me</title>
     <link rel="stylesheet" href="css/aboutme.css" />
   </head>
-  <body>
+  <body oncontextmenu="return false">
     <div class="background">
       <script>
         document.addEventListener("DOMContentLoaded", function () {
@@ -166,6 +166,15 @@ function reveal() {
   }
 }
 
+document.addEventListener("keydown", function (event) {
+  if (event.ctrlKey) {
+    event.preventDefault();
+  }
+
+  if (event.keyCode == 123) {
+    event.preventDefault();
+  }
+});
 </script>
   </body>
 </html>
