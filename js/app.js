@@ -18,7 +18,6 @@ document.addEventListener("DOMContentLoaded", function () {
     document.body.append(ball);
   }
 
-  // Keyframes
   balls.forEach((el, i) => {
     let to = {
       x: Math.random() * (i % 2 === 0 ? -11 : 11),
@@ -31,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
         { transform: `translate(${to.x}rem, ${to.y}rem)` },
       ],
       {
-        duration: (Math.random() + 1) * 2000, // random duration
+        duration: (Math.random() + 1) * 2000,
         direction: "alternate",
         fill: "both",
         iterations: Infinity,
