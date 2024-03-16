@@ -8,6 +8,7 @@ body {
   overflow: hidden;
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
 }
 
 .box {
@@ -55,16 +56,39 @@ body {
 }
 
 .box li a {
+  position: relative;
   color: #9f9f9f;
   font-size: 30px;
   animation: transitionIn 1s;
 }
 
+.box li a::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 5px;
+  color: #ffffff;
+  font-size: 14px;
+  font-family: "Mali", sans-serif;
+  font-weight: bold;
+  border-radius: 5px;
+  opacity: 0;
+  transition: opacity 0.3s;
+  white-space: nowrap;
+}
+
+.box li a:hover::after {
+  opacity: 1;
+}
+
 .box li a:hover {
-  color: #380000;
+  color: #ff8282;
 }
 
 .aboutme {
+  position: relative;
   float: right;
   margin: 6px;
   font-size: 30px;
@@ -75,14 +99,34 @@ body {
   color: #9f9f9f;
 }
 
-.aboutme a:hover {
-  color: #380000;
+.aboutme a::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 5px;
+  color: #ffffff;
+  font-size: 14px;
+  font-family: "Mali", sans-serif;
+  font-weight: bold;
+  border-radius: 5px;
+  opacity: 0;
+  transition: opacity 0.3s;
+  white-space: nowrap;
+}
+ 
+ .aboutme a:hover::after {
+  opacity: 1;
 }
 
+ .aboutme a:hover {
+  color: #ff8282;
+}
 .ball {
   position: relative;
   border-radius: 100%;
-  opacity: 0.7;
+  opacity: 0.2;
   z-index: 1;
   animation: transitionIn 5s;
 }

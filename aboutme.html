@@ -1,184 +1,205 @@
 <!DOCTYPE html>
-
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <script
-      src="https://code.iconify.design/iconify-icon/1.0.1/iconify-icon.min.js"></script>
-    <title>About Me</title>
-    <link rel="stylesheet" href="css/aboutme.css" />
-  </head>
-  <body oncontextmenu="return false">
-    <div class="background">
-      <script>
-        document.addEventListener("DOMContentLoaded", function () {
-          const colors = ["#3CC157", "#2AA7FF", "#1B1B1B", "#FCBC0F", "#F85F36"];
-          const numBalls = 50;
-          const balls = [];
-  
-          for (let i = 0; i < numBalls; i++) {
-            let ball = document.createElement("div");
-            ball.classList.add("ball");
-            ball.style.background = colors[Math.floor(Math.random() * colors.length)];
-            ball.style.left = `${Math.floor(Math.random() * 100)}vw`;
-            ball.style.top = `${Math.floor(Math.random() * 100)}vh`;
-            ball.style.transform = `scale(${Math.random()})`;
-            ball.style.width = `${Math.random()}em`;
-            ball.style.height = ball.style.width;
-  
-            balls.push(ball);
-            document.querySelector('.background').append(ball);
-          }
-  
-          balls.forEach((el, i) => {
-            let to = {
-              x: Math.random() * (i % 2 === 0 ? -11 : 11),
-              y: Math.random() * 12,
-            };
-  
-            let anim = el.animate(
-              [
-                { transform: "translate(0, 0)" },
-                { transform: `translate(${to.x}rem, ${to.y}rem)` },
-              ],
-              {
-                duration: (Math.random() + 1) * 2000,
-                direction: "alternate",
-                fill: "both",
-                iterations: Infinity,
-                easing: "ease-in-out",
-              }
-            );
-          });
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <script src="https://code.iconify.design/iconify-icon/1.0.1/iconify-icon.min.js"></script>
+        <title>About Me</title>
+        <link rel="stylesheet" href="css/aboutme.css">
+    </head>
+    <body oncontextmenu="return false">
+        <div class="background">
+            <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const colors = ["#3CC157", "#2AA7FF", "#1B1B1B", "#FCBC0F", "#F85F36"];
+        const numBalls = 50;
+        const balls = [];
+
+        for (let i = 0; i < numBalls; i++) {
+          let ball = document.createElement("div");
+          ball.classList.add("ball");
+          ball.style.background = colors[Math.floor(Math.random() * colors.length)];
+          ball.style.left = `${Math.floor(Math.random() * 100)}vw`;
+          ball.style.top = `${Math.floor(Math.random() * 100)}vh`;
+          ball.style.transform = `scale(${Math.random()})`;
+          ball.style.width = `${Math.random()}em`;
+          ball.style.height = ball.style.width;
+
+          balls.push(ball);
+          document.querySelector('.background').append(ball);
+        }
+
+        balls.forEach((el, i) => {
+          let to = {
+            x: Math.random() * (i % 2 === 0 ? -11 : 11),
+            y: Math.random() * 12,
+          };
+
+          let anim = el.animate(
+            [
+              { transform: "translate(0, 0)" },
+              { transform: `translate(${to.x}rem, ${to.y}rem)` },
+            ],
+            {
+              duration: (Math.random() + 1) * 2000,
+              direction: "alternate",
+              fill: "both",
+              iterations: Infinity,
+              easing: "ease-in-out",
+            }
+          );
         });
-      </script>
-    </div>
-    <div class="container">
-      <a class="home" href="./"><iconify-icon
-          icon="material-symbols:home"></iconify-icon></a>
-      <section class="whome">
-        <h1>Who am I?</h1>
-        <p>
-          Hello there! I go by the nickname Furq on the Internet, I'm a person
-          with a
-          bunch of random hobbies, I enjoy doing a bit of everything!<br><br>
-          I'm
-          currently a freelancer working as
-          <a
-            href="https://www.fiverr.com/furqanahmedk"
-            target="_blank">Minecraft Server Developer</a>. Additionally, I am
-          Server Manager at
-          <a href="https://https:cobblemonislands.com" target="_blank">Cobblemon
-            Islands</a>.<br><br> I'm pursuing a degree in computer science,
-          I am also learning Python and Java to expand my
-          skills, I also know a bit of html, css and js which I used to make
-          this website!<br><br>Oh, and I'm a huge coffee lover, so you could say
-          my sleep schedule is a mess! 😄
-        </p>
-      </div>
+      });
+            </script>
+        </div>
+        <div class="container">
+            <a class="home" href="./">
+                <iconify-icon icon="material-symbols:home"></iconify-icon>
+            </a>
+            <section class="whome">
+                <h1>Who am I?</h1>
+                <p>
+                    Hey! I'm Furq, a computer science student with a passion for coding.
+        Currently, I'm expanding my skillset with Python, Java, and Kotlin,
+        focusing on Minecraft server and mod development. It's a great way to
+        combine creativity with technical skills!
+                </p>
+                <p>
+                    <b>Beyond coding, I enjoy
+                        <a href="#hobbies">Random Hobbies</a>
+                    </b>
+                    <br>
+                    It's always refreshing to
+        explore different interests and keep things interesting.
+                </p>
+                <p>
+                    <b>My Projects and Occupation:</b>
+                    <br>
+                    Minecraft Server Development (Freelance):
+                    <a href="https://fiverr.com/furqanahmedk?public_mode=true">fiverr.com/furqanahmedk</a>
+                    <br>
+                    Cobblemon Islands (Manager):
+                    <a href="https://cobblemonislands.com">cobblemonislands.com</a>
+                    <br>
+                    For more details on my projects, please visit the <a href="#projects">Projects</a> section.
+                </p>
+                <p>
+                    Feel free to reach out if you'd like to connect and chat about coding,
+        Minecraft, or anything that piques your curiosity!
+                </p>
+            </div>
+        </section>
+    <section id="projects" class="projects reveal">
+        <h1>Projects:</h1>
+        <div class="projects-container">
+            <div class="project-card">
+                <h3>Freelance Projects</h3>
+                <p>I have worked on variety of projects through my freelancing endeavors. For a comprehensive overview, please visit my Fiverr profile.</p>
+            </div>
+            <div class="project-card">
+                <h3>Cobblemon Islands</h3>
+                <p>
+                    Currently, I serve as the Server Manager for Cobblemon Islands, overseeing the server's operations and ensuring a smooth gaming experience for all players.
+                </p>
+            </div>
+            <div class="project-card">
+                <h3>Tagify</h3>
+                <p>
+                    I am in the process of developing a Fabric mod named Tagify, aimed at enhancing the functionality of tags and suffixes, drawing inspiration from a plugin called DeluxeTags. This project aims to introduce additional features to streamline the tagging process.
+                </p>
+            </div>
+        </div>
     </section>
-
-    <section class="skills reveal">
-      <h1>Skills:</h1>
-      <div class="divskills">
-        <div class="skill">
-          <div class="skill-name">HTML</div>
-          <div class="skill-bar">
-            <div class="skill-per" per="70%" style="max-width:70%"></div>
-          </div>
+    <section id="hobbies" class="hobbies reveal">
+        <h1>Hobbies:</h1>
+        <div class="hobbies-container">
+            <div class="hobby-card">
+                <a
+                    class="icon"
+                    href="https://steamcommunity.com/id/Furq7"
+                    target="_blank"
+                    aria-label="Video Games"
+                >
+                    <iconify-icon icon="gg:games"></iconify-icon>
+                    <p>Video Games</p>
+                </a>
+            </a>
         </div>
-
-        <div class="skill">
-          <div class="skill-name">CSS</div>
-          <div class="skill-bar">
-            <div class="skill-per" per="50%" style="max-width:50%"></div>
-          </div>
-        </div>
-
-        <div class="skill">
-          <div class="skill-name">Javascript</div>
-          <div class="skill-bar">
-            <div class="skill-per" per="70%" style="max-width:70%"></div>
-          </div>
-
-          <div class="skill">
-            <div class="skill-name">Python</div>
-            <div class="skill-bar">
-              <div class="skill-per" per="35%" style="max-width:35%"></div>
+        <a
+            class="icon"
+            href="https://anilist.co/user/Furq"
+            target="_blank"
+            aria-label="Anime"
+        >
+            <div class="hobby-card">
+                <iconify-icon icon="arcticons:animex-wallpaper"></iconify-icon>
+                <p>Anime</p>
             </div>
-
-            <div class="skill">
-              <div class="skill-name">Java</div>
-              <div class="skill-bar">
-                <div class="skill-per" per="25%" style="max-width:25%"></div>
-              </div>
+        </a>
+        <a
+            class="icon"
+            href="https://allpoetry.com/Furq"
+            target="_blank"
+            aria-label="Poetry"
+        >
+            <div class="hobby-card">
+                <iconify-icon icon="system-uicons:write"></iconify-icon>
+                <p>Poetry</p>
             </div>
+        </a>
+        <a
+            class="icon"
+            href="https://github.com/Furq07"
+            target="_blank"
+            aria-label="Coding"
+        >
+            <div class="hobby-card">
+                <iconify-icon icon="ph:code-fill"></iconify-icon>
+                <p>Coding</p>
+            </div>
+        </a>
+        <a
+            class="icon"
+            href="https://www.youtube.com/shorts/d7QcgBld-a8"
+            target="_blank"
+            aria-label="Electronics"
+        >
+            <div class="hobby-card">
+                <iconify-icon icon="iconoir:electronics-chip"></iconify-icon>
+                <p>Electronics</p>
+            </div>
+        </a>
+    </div>
+</section>
+</div>
+<script type="text/javascript">
 
-          </section>
+    window.addEventListener("scroll", reveal);
 
-          <section class="hobbies reveal">
-            <h1>Hobbies:</h1>
-            <p>
-              <a class="icon" href="https://steamcommunity.com/id/Furq7"
-                target="_blank"><iconify-icon icon="gg:games"></iconify-icon>
-                Video Games</a>
-              - I like to play video games for fun. I play games like minecraft,
-              fortnite, valorant and planet zoo, That's what I sometimes do when
-              I have
-              free time!<br /><br />
-              <a class="icon" href="https://anilist.co/user/Furq"
-                target="_blank"><iconify-icon
-                  icon="arcticons:animex-wallpaper"></iconify-icon>
-                Anime</a>
-              - I love watching anime! It's where I spend most of my free
-              time, Some of my favorites are 91 Days, Steins;Gate, EIGHTY-SIX,
-              Vinland Saga and Your Lie in April! <br /><br />
-              <a class="icon" href="https://allpoetry.com/Furq"
-                target="_blank"><iconify-icon
-                  icon="system-uicons:write"></iconify-icon> Poetry</a>
-              - I just started this hobby recently. I'm not very good at writing
-              yet,
-              But hey, I'm just a beginner!<br /><br />
-              <a class="icon" href="https://github.com/Furq07"
-                target="_blank"><iconify-icon
-                  icon="ph:code-fill"></iconify-icon> Coding</a>
-              - I usually make simple things with code for myself, like Discord
-              bots
-              or automating tasks with Python!<br /><br />
-            </p>
-          </section>
-        </div>
-        <script type="text/javascript">
+    function reveal() {
+      var reveals = document.querySelectorAll(".reveal");
+      for (var i = 0; i < reveals.length; i++) {
+        var windowheight = window.innerHeight;
+        var revealtop = reveals[i].getBoundingClientRect().top;
+        var revealpoint = 150;
 
-window.addEventListener("scroll", reveal);
-
-function reveal() {
-  var reveals = document.querySelectorAll(".reveal");
-  for (var i = 0; i < reveals.length; i++) {
-    var windowheight = window.innerHeight;
-    var revealtop = reveals[i].getBoundingClientRect().top;
-    var revealpoint = 150;
-
-    if (revealtop < windowheight - revealpoint) {
-      reveals[i].classList.add("active");
-    } else {
-      reveals[i].classList.remove("active");
+        if (revealtop < windowheight - revealpoint) {
+          reveals[i].classList.add("active");
+        } else {
+          reveals[i].classList.remove("active");
+        }
+      }
     }
-  }
-}
 
-document.addEventListener("keydown", function (event) {
-  if (event.ctrlKey) {
-    event.preventDefault();
-  }
+    document.addEventListener("keydown", function (event) {
+      if (event.ctrlKey) {
+        event.preventDefault();
+      }
 
-  if (event.keyCode == 123) {
-    event.preventDefault();
-  }
-});
+      if (event.keyCode == 123) {
+        event.preventDefault();
+      }
+    });
 </script>
-      </body>
-    </html>
+</body>
+</html>
